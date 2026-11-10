@@ -52,6 +52,42 @@
     });
   }
 
+  /* ---------- theme ---------- */
+  var themeBtn = document.querySelector(".theme-toggle");
+  var themeMeta = document.querySelector('meta[name="theme-color"]');
+  var themeKey = "jay-theme";
+
+  function paintTheme(theme) {
+    var dark = theme === "dark";
+    document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+    if (themeMeta) themeMeta.setAttribute("content", dark ? "#141310" : "#f4f1ea");
+    if (themeBtn) {
+      themeBtn.setAttribute("aria-pressed", String(dark));
+      themeBtn.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+    }
+  }
+
+  paintTheme(document.documentElement.getAttribute("data-theme") || "light");
+
+  if (themeBtn) {
+    themeBtn.addEventListener("click", function () {
+      var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      paintTheme(next);
+      try { localStorage.setItem(themeKey, next); } catch (e) {}
+    });
+  }
+
+  var themeSaved = null;
+  try { themeSaved = localStorage.getItem(themeKey); } catch (e) {}
+  if (!themeSaved && window.matchMedia) {
+    var themeMq = window.matchMedia("(prefers-color-scheme: dark)");
+    if (themeMq.addEventListener) {
+      themeMq.addEventListener("change", function (e) {
+        paintTheme(e.matches ? "dark" : "light");
+      });
+    }
+  }
+
   /* ---------- reveal ---------- */
   var revealables = document.querySelectorAll(".reveal");
 

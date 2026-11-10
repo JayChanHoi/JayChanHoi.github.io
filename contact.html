@@ -14,8 +14,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+  <script>
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem("jay-theme"); } catch (e) {}
+      var theme = saved === "dark" || saved === "light"
+        ? saved
+        : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      var root = document.documentElement;
+      root.setAttribute("data-theme", theme);
+      root.classList.add("js");
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.setAttribute("content", theme === "dark" ? "#141310" : "#f4f1ea");
+    })();
+  </script>
   <link rel="stylesheet" href="./assets/css/site.css">
-  <script>document.documentElement.classList.add("js");</script>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXQLH66J4S"></script>
@@ -37,6 +50,11 @@
         <span class="brand-dot" aria-hidden="true"></span>
         Jay Chan
       </a>
+
+      <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">
+        <span class="theme-toggle-to-dark">Dark</span>
+        <span class="theme-toggle-to-light">Light</span>
+      </button>
 
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
         <span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
