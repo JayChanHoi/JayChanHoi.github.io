@@ -78,25 +78,6 @@
     bar.style.setProperty("--v", w + "%");
   });
 
-  /* ---------- contact form ---------- */
-  var form = document.querySelector("[data-contact-form]");
-  if (form) {
-    var inputs = form.querySelectorAll("[data-form-input]");
-    var btn = form.querySelector("[data-form-btn]");
-
-    function sync() {
-      var ready = Array.prototype.every.call(inputs, function (input) {
-        return input.value.trim().length > 0;
-      });
-      if (btn) btn.disabled = !ready;
-    }
-
-    inputs.forEach(function (input) {
-      input.addEventListener("input", sync);
-    });
-    sync();
-  }
-
   /* ---------- current year ---------- */
   document.querySelectorAll("[data-year]").forEach(function (el) {
     el.textContent = String(new Date().getFullYear());
