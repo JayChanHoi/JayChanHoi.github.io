@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Abstract cover">
+<rect width="1200" height="750" fill="#efe9dc"/>
+<g><path d="M80 610 C 280 610, 330 230, 520 230 S 700 520, 860 520 S 1010 130, 1120 130" fill="none" stroke="#14130f" stroke-width="4" opacity="0.8"/><path d="M80 640 H 1120" stroke="#14130f" stroke-width="1.5" opacity="0.25"/><path d="M520 230 V 640" stroke="#c8451f" stroke-width="2" stroke-dasharray="8 12"/><circle cx="520" cy="230" r="12" fill="#c8451f"/></g>
+<text x="100" y="710" font-family="IBM Plex Mono, monospace" font-size="20" letter-spacing="5" fill="#14130f" opacity="0.42">JAY CHAN / NOTES</text>
+</svg>

@@ -2,368 +2,170 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="X-UA-Compatible" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jay Chan - Blog</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Writing — Jay Chan</title>
+  <meta name="description" content="Notes on machine learning by Jay Chan: summarisation, transformer adapters, double descent, and model calibration.">
+  <meta name="theme-color" content="#f4f1ea">
 
-    <!--
-      - favicon
-    -->
-    <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <link rel="icon" href="./assets/images/logo.svg" type="image/svg+xml">
 
-    <!--
-      - custom css link
-    -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <!--
-      - google font link
-    -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXQLH66J4S"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+  <link rel="stylesheet" href="./assets/css/site.css">
+  <script>document.documentElement.classList.add("js");</script>
 
-        gtag('config', 'G-LXQLH66J4S');
-    </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXQLH66J4S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-LXQLH66J4S');
+  </script>
 </head>
 
 <body>
-
-    <!--
-      - #MAIN
-    -->
-
-    <main>
-
-        <!--
-          - #SIDEBAR
-        -->
-
-        <aside class="sidebar" data-sidebar>
-
-            <div class="sidebar-info">
-
-                <figure class="avatar-box">
-                    <img src="./assets/images/profile_picture_1.JPG" alt="Jay Chan" width="80">
-                </figure>
-
-                <div class="info-content">
-                    <h1 class="name" title="Jay Chan">Jay Chan</h1>
-
-                    <p class="title">Founder</p>
-                    <p class="title">AI Engineering Lead</p>
-                </div>
-
-                <button class="info_more-btn" data-sidebar-btn>
-                    <span>Show Contacts</span>
-
-                    <ion-icon name="chevron-down"></ion-icon>
-                </button>
-
-            </div>
-
-            <div class="sidebar-info_more">
-
-                <div class="separator"></div>
-
-                <ul class="contacts-list">
-
-                    <li class="contact-item">
-
-                        <div class="icon-box">
-                            <ion-icon name="mail-outline"></ion-icon>
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">Email</p>
-
-                            <a href="mailto:jaychanhoi1991@gmail.com" class="contact-link">jaychanhoi1991@gmail.com</a>
-                        </div>
-
-                    </li>
-
-                    <li class="contact-item">
-
-                        <div class="icon-box">
-                            <ion-icon name="phone-portrait-outline"></ion-icon>
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">Phone</p>
-
-                            <a href="tel:+85269773944" class="contact-link">+852 6977 3944</a>
-                        </div>
-
-                    </li>
-
-                    <li class="contact-item">
-
-                        <div class="icon-box">
-                            <ion-icon name="location-outline"></ion-icon>
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">Location</p>
-
-                            <address>Hong Kong</address>
-                        </div>
-
-                    </li>
-
-                </ul>
-
-                <div class="separator"></div>
-
-                <ul class="social-list">
-
-                    <li class="social-item">
-                        <a href="https://github.com/JayChanHoi" class="social-link">
-                            <ion-icon name="logo-github"></ion-icon>
-                        </a>
-                    </li>
-
-                    <li class="social-item">
-                        <a href="https://medium.com/@jaychanhoi1991" class="social-link">
-                            <ion-icon name="logo-medium"></ion-icon>
-                        </a>
-                    </li>
-
-                   <li class="social-item">
-                        <a href="https://www.linkedin.com/in/jay-chan-384800b0/" class="social-link">
-                            <ion-icon name="logo-linkedin"></ion-icon>
-                        </a>
-                   </li>
-
-                </ul>
-
-            </div>
-
-        </aside>
-
-
-        <!--
-          - #main-content
-        -->
-
-        <div class="main-content">
-
-            <!--
-              - #NAVBAR
-            -->
-
-            <nav class="navbar">
-
-                <ul class="navbar-list">
-
-                    <li class="navbar-item">
-                        <a href="index.html" class="navbar-link">About</a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="resume.html" class="navbar-link">Resume</a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="#" class="navbar-link active">Blog</a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="contact.html" class="navbar-link">Contact</a>
-                    </li>
-
-                </ul>
-
-            </nav>
-
-            <!--
-                  - #BLOG
-                -->
-
-            <article class="blog active" data-page="blog">
-
-                <header>
-                    <h2 class="h2 article-title">Blog</h2>
-                </header>
-
-                <section class="blog-posts">
-
-                    <ul class="blog-posts-list">
-                        <li class="blog-post-item">
-                            <a href="https://medium.com/@jaychanhoi1991/how-good-is-the-sota-summarization-94c0039f6498?source=MyBlog" target="_blank">
-
-                                <figure class="blog-banner-box">
-                                    <img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*_c-PtijuTCyw5lv_7oglIw.png" alt="How good is the SOTA summarization?" loading="lazy">
-                                </figure>
-
-                                <div class="blog-content">
-
-                                    <div class="blog-meta">
-                                        <p class="blog-category">NLP Summarization</p>
-
-                                        <span class="dot"></span>
-
-                                        <time datetime="2023-08-16">Oct 5, 2020</time>
-                                    </div>
-
-                                    <h3 class="h3 blog-item-title">
-                                        How good is the SOTA summarization?
-                                    </h3>
-
-                                    <p class="blog-text">
-                                        Estimating the performance of the latest SOTA language model in summarization.
-                                    </p>
-                                </div>
-
-                            </a>
-                        </li>
-                        <li class="blog-post-item">
-                            <a href="https://medium.com/@jaychanhoi1991/adapter-and-adapterhub-for-transformers-a-new-era-for-transformer-based-nlp-technologies-cad621f2510a?source=MyBlog" target="_blank">
-
-                                <figure class="blog-banner-box">
-                                    <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*JmiHqh3dNTN2tnx4vk_lMQ.png" alt="Adapter and AdapterHub for transformers — A new era for transformer based NLP technologies" loading="lazy">
-                                </figure>
-
-                                <div class="blog-content">
-
-                                    <div class="blog-meta">
-                                        <p class="blog-category">Transformer Finetuning</p>
-
-                                        <span class="dot"></span>
-
-                                        <time datetime="2023-08-02">Aug 16, 2020</time>
-                                    </div>
-
-                                    <h3 class="h3 blog-item-title">
-                                        Adaptor and AdaptorHub for transformers
-                                    </h3>
-
-                                    <p class="blog-text">
-                                        To finetune a transformer based model that suit your need doesn't necessary can
-                                        be more sufficient that you can ever thought. Sometimes, training on a part of
-                                        it has already done most of the job.
-                                    </p>
-                                </div>
-
-                            </a>
-                        </li>
-                        <li class="blog-post-item">
-                            <a href="https://medium.com/analytics-vidhya/over-parametrized-equals-to-overfitted-here-is-the-answer-you-need-af5bb0535a8?source=MyBlog" target="_blank">
-
-                                <figure class="blog-banner-box">
-                                    <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*IlZiJY6-HxgzXnjUGDWROQ.png" alt="Double Descent or Bias-Variance Trade-off? Here is what you need" loading="lazy">
-                                </figure>
-
-                                <div class="blog-content">
-
-                                    <div class="blog-meta">
-                                        <p class="blog-category">Over-parametrization</p>
-
-                                        <span class="dot"></span>
-
-                                        <time datetime="2023-07-12">Jun 7, 2020</time>
-                                    </div>
-
-                                    <h3 class="h3 blog-item-title">
-                                        Double Descent or Bias-Variance Trade-off? Here is what you need
-                                    </h3>
-
-                                    <p class="blog-text">
-                                        Over-parametrization has been a pitfall to a model if there is
-                                        only limited feature with limited data. But now, it seems over-parametrization
-                                        is the hope of the next generation AI model.
-                                    </p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="blog-post-item">
-                            <a href="https://medium.com/analytics-vidhya/more-about-model-calibration-353dafff9f76?source=MyBlog" target="_blank">
-
-                                <figure class="blog-banner-box">
-                                    <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*QPlNP-w8HOjzMpeVl6ilOg.png" alt="More about model calibration" loading="lazy">
-                                </figure>
-
-                                <div class="blog-content">
-
-                                    <div class="blog-meta">
-                                        <p class="blog-category">Model Calibration</p>
-
-                                        <span class="dot"></span>
-
-                                        <time datetime="2023-07-12">Jun 1, 2020</time>
-                                    </div>
-
-                                    <h3 class="h3 blog-item-title">
-                                        More about Model Calibration
-                                    </h3>
-
-                                    <p class="blog-text">
-                                        Where is the source of misalignment problem of model prediction with accuracy?
-                                        Here will unveil the truth and show you the practical way to handle it.
-                                    </p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="blog-post-item">
-                            <a href="https://medium.com/analytics-vidhya/model-calibration-the-things-that-a-experts-may-miss-62924aef09ed?source=MyBlog" target="_blank">
-
-                                <figure class="blog-banner-box">
-                                    <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*ia-FW6n6SsSCeCJib0POfA.png" alt="Model Calibration — the thing that an expert may miss" loading="lazy">
-                                </figure>
-
-                                <div class="blog-content">
-
-                                    <div class="blog-meta">
-                                        <p class="blog-category">Model Calibration</p>
-
-                                        <span class="dot"></span>
-
-                                        <time datetime="2023-07-12">Jun 1, 2020</time>
-                                    </div>
-
-                                    <h3 class="h3 blog-item-title">
-                                        Model Calibration, the thing that an expert may miss
-                                    </h3>
-
-                                    <p class="blog-text">
-                                        A model being accurate doesn't equal to being well calibrated. A uncalibrated
-                                        model could bring you serious damage to your business value in production.
-                                    </p>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-
-                </section>
-
-            </article>
-
-
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html" aria-label="Jay Chan, home">
+        <span class="brand-dot" aria-hidden="true"></span>
+        Jay Chan
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+        Menu
+      </button>
+
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <a href="index.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="blog.html" aria-current="page">Blog</a>
+        <a href="contact.html" class="nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="shell">
+      <header class="masthead">
+        <p class="eyebrow">Writing · Medium</p>
+        <h1 class="page-title">Notes from the work.</h1>
+        <p>
+          Evals, calibration, and the parts of machine learning that decide whether
+          a model is actually useful.
+        </p>
+      </header>
+
+      <!-- FEATURED -->
+      <a class="featured" href="https://medium.com/@jaychanhoi1991/how-good-is-the-sota-summarization-94c0039f6498?source=MyBlog" target="_blank" rel="noopener noreferrer">
+        <figure class="featured-cover">
+          <img src="./assets/images/covers/summarization.svg" alt="Abstract cover with uneven bars representing summarisation scores" width="1200" height="750">
+        </figure>
+        <div>
+          <p class="post-meta">
+            <span class="post-cat">NLP Summarization</span>
+            <span class="dot-sep" aria-hidden="true"></span>
+            <time datetime="2020-10-05">Oct 5, 2020</time>
+          </p>
+          <h2>How good is the SOTA summarization?</h2>
+          <p>
+            Estimating the performance of the latest SOTA language model in
+            summarisation, and what the score does not tell you.
+          </p>
+          <span class="read-more">Read on Medium <span class="arrow" aria-hidden="true">→</span></span>
         </div>
+      </a>
 
-    </main>
+      <!-- GRID -->
+      <div class="post-grid">
+        <a class="post reveal" href="https://medium.com/@jaychanhoi1991/adapter-and-adapterhub-for-transformers-a-new-era-for-transformer-based-nlp-technologies-cad621f2510a?source=MyBlog" target="_blank" rel="noopener noreferrer">
+          <figure class="post-cover">
+            <img src="./assets/images/covers/adapters.svg" alt="Abstract cover with concentric rings" width="1200" height="750" loading="lazy">
+          </figure>
+          <p class="post-meta">
+            <span class="post-cat">Transformer Finetuning</span>
+            <span class="dot-sep" aria-hidden="true"></span>
+            <time datetime="2020-08-16">Aug 16, 2020</time>
+          </p>
+          <h2>Adapter and AdapterHub for transformers</h2>
+          <p>
+            Fine-tuning a whole transformer is not always the efficient path.
+            Training on part of it often does most of the job.
+          </p>
+          <span class="read-more">Read on Medium <span class="arrow" aria-hidden="true">→</span></span>
+        </a>
 
+        <a class="post reveal" style="--delay:80ms" href="https://medium.com/analytics-vidhya/over-parametrized-equals-to-overfitted-here-is-the-answer-you-need-af5bb0535a8?source=MyBlog" target="_blank" rel="noopener noreferrer">
+          <figure class="post-cover">
+            <img src="./assets/images/covers/double-descent.svg" alt="Abstract cover with a curve crossing a dashed threshold" width="1200" height="750" loading="lazy">
+          </figure>
+          <p class="post-meta">
+            <span class="post-cat">Over-parametrization</span>
+            <span class="dot-sep" aria-hidden="true"></span>
+            <time datetime="2020-06-07">Jun 7, 2020</time>
+          </p>
+          <h2>Double descent or bias-variance trade-off?</h2>
+          <p>
+            Over-parametrization was a pitfall with little data. Now it looks like
+            the direction the next generation of models depends on.
+          </p>
+          <span class="read-more">Read on Medium <span class="arrow" aria-hidden="true">→</span></span>
+        </a>
 
+        <a class="post reveal" style="--delay:160ms" href="https://medium.com/analytics-vidhya/more-about-model-calibration-353dafff9f76?source=MyBlog" target="_blank" rel="noopener noreferrer">
+          <figure class="post-cover">
+            <img src="./assets/images/covers/calibration.svg" alt="Abstract cover with a calibration grid and line" width="1200" height="750" loading="lazy">
+          </figure>
+          <p class="post-meta">
+            <span class="post-cat">Model Calibration</span>
+            <span class="dot-sep" aria-hidden="true"></span>
+            <time datetime="2020-06-01">Jun 1, 2020</time>
+          </p>
+          <h2>More about model calibration</h2>
+          <p>
+            Where accuracy and predicted confidence drift apart, and the practical
+            ways to close the gap before it costs you.
+          </p>
+          <span class="read-more">Read on Medium <span class="arrow" aria-hidden="true">→</span></span>
+        </a>
+      </div>
+    </div>
 
+    <!-- CTA -->
+    <section class="cta-band">
+      <div class="shell">
+        <p class="eyebrow">Say hello</p>
+        <h2>Working on something <em>hard</em>?</h2>
+        <div class="hero-actions">
+          <a class="btn" href="contact.html">
+            Get in touch
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="btn btn-ghost" href="https://medium.com/@jaychanhoi1991" target="_blank" rel="noopener noreferrer">All posts on Medium</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p class="footer-note">© <span data-year>2026</span> Jay Chan · Hong Kong</p>
+      <ul class="socials">
+        <li><a href="https://github.com/JayChanHoi" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GH</a></li>
+        <li><a href="https://medium.com/@jaychanhoi1991" target="_blank" rel="noopener noreferrer" aria-label="Medium">MD</a></li>
+        <li><a href="https://www.linkedin.com/in/jay-chan-384800b0/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LI</a></li>
+      </ul>
+    </div>
+  </footer>
 
-
-    <!--
-      - custom js link
-    -->
-    <script src="./assets/js/script.js"></script>
-
-    <!--
-      - ionicon link
-    -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+  <script src="./assets/js/site.js"></script>
 </body>
 
 </html>

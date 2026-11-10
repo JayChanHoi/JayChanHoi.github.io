@@ -2,625 +2,351 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="X-UA-Compatible" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jay Chan - Resume</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume — Jay Chan</title>
+  <meta name="description" content="Jay Chan's resume: founder of Oraclens Intelligence, former AI Engineering Lead at the Hong Kong Monetary Authority, with eight years of production machine learning in Hong Kong.">
+  <meta name="theme-color" content="#f4f1ea">
 
-    <!--
-      - favicon
-    -->
-    <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <link rel="icon" href="./assets/images/logo.svg" type="image/svg+xml">
 
-    <!--
-      - custom css link
-    -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <!--
-      - google font link
-    -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXQLH66J4S"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+  <link rel="stylesheet" href="./assets/css/site.css">
+  <script>document.documentElement.classList.add("js");</script>
 
-        gtag('config', 'G-LXQLH66J4S');
-    </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXQLH66J4S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-LXQLH66J4S');
+  </script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"></div>
 
-    <!--
-      - #MAIN
-    -->
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html" aria-label="Jay Chan, home">
+        <span class="brand-dot" aria-hidden="true"></span>
+        Jay Chan
+      </a>
 
-    <main>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+        Menu
+      </button>
 
-        <!--
-          - #SIDEBAR
-        -->
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <a href="index.html">About</a>
+        <a href="resume.html" aria-current="page">Resume</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html" class="nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-        <aside class="sidebar" data-sidebar>
+  <main id="main">
+    <div class="shell">
+      <header class="masthead">
+        <p class="eyebrow">Resume · Nov 2026</p>
+        <h1 class="page-title">Build it, then make it <em style="font-style:italic;color:var(--accent)">stick</em>.</h1>
+        <p>
+          Founder and AI engineering lead with eight years of production machine
+          learning in Hong Kong, including regulated financial services.
+        </p>
+      </header>
 
-            <div class="sidebar-info">
+      <div class="resume-layout">
+        <div>
+          <!-- EXPERIENCE -->
+          <section aria-labelledby="experience-title">
+            <div class="section-head" style="margin-bottom:24px">
+              <p class="section-index">01</p>
+              <h2 class="section-title" id="experience-title" style="font-size:var(--step-3)">Experience</h2>
+            </div>
 
-                <figure class="avatar-box">
-                    <img src="./assets/images/profile_picture_1.JPG" alt="Jay Chan" width="80">
-                </figure>
-
-                <div class="info-content">
-                    <h1 class="name" title="Jay Chan">Jay Chan</h1>
-
-                    <p class="title">Founder</p>
-                    <p class="title">AI Engineering Lead</p>
+            <div class="timeline">
+              <article class="timeline-item is-current reveal">
+                <p class="timeline-when">Present</p>
+                <div>
+                  <h3 class="timeline-role">Founder</h3>
+                  <span class="timeline-org">Oraclens Intelligence</span>
+                  <p class="timeline-lead">Building agent-native tools for research and investment analysis.</p>
+                  <ul class="timeline-points">
+                    <li>An agent research desk covering analysis, monitoring, and portfolio intelligence.</li>
+                    <li>Skills and agent loops that write research notes; they do not place orders.</li>
+                    <li>Last-mile delivery paired with evaluated, production-minded agent systems.</li>
+                  </ul>
                 </div>
+              </article>
 
-                <button class="info_more-btn" data-sidebar-btn>
-                    <span>Show Contacts</span>
+              <article class="timeline-item reveal">
+                <p class="timeline-when">2025 — 2026</p>
+                <div>
+                  <h3 class="timeline-role">AI Engineering Lead</h3>
+                  <a class="timeline-org" href="https://www.hkma.gov.hk/" target="_blank" rel="noopener noreferrer">Hong Kong Monetary Authority</a>
+                  <p class="timeline-lead">Led AI CoE delivery and governance for internal GenAI and agentic platforms.</p>
+                  <ul class="timeline-points">
+                    <li>Stood up multi-agent platforms spanning compliance, investment research, and related workflows.</li>
+                    <li>Delivered an organisation-wide meeting-minutes solution with material productivity gain (~1,000 man-days/year).</li>
+                    <li>Co-led agent infrastructure and AI governance against HKMA AI principles, including retrieval and quality monitoring.</li>
+                  </ul>
+                </div>
+              </article>
 
-                    <ion-icon name="chevron-down"></ion-icon>
-                </button>
+              <article class="timeline-item reveal">
+                <p class="timeline-when">2024 — 2025</p>
+                <div>
+                  <h3 class="timeline-role">Digitalization Manager</h3>
+                  <a class="timeline-org" href="https://www.hkpc.org/en" target="_blank" rel="noopener noreferrer">Hong Kong Productivity Council</a>
+                  <p class="timeline-lead">AI solution architect and product lead for governed GenAI programmes.</p>
+                  <ul class="timeline-points">
+                    <li>Led a GenAI and retrieval programme that transformed complex funding-scheme vetting, with substantial productivity gain and a patent-filed invention.</li>
+                    <li>Owned security, scalability, and governance for enterprise GenAI delivery.</li>
+                    <li>Led and oversaw cycle-time optimisation.</li>
+                  </ul>
+                </div>
+              </article>
 
+              <article class="timeline-item reveal">
+                <p class="timeline-when">2022 — 2024</p>
+                <div>
+                  <h3 class="timeline-role">Senior Data Scientist</h3>
+                  <span class="timeline-org">Apoidea</span>
+                  <p class="timeline-lead">Small-team lead for data science: quantitative trading, recommendation, and an LLM news aggregator.</p>
+                  <ul class="timeline-points">
+                    <li>Built a deep-RL trading system that keeps learning and adjusting, aimed at near-unattended operation.</li>
+                    <li>Statistical-arbitrage and trend-following strategies, each above +50% annualised return with Sharpe ratio above 3.</li>
+                    <li>Designed and shipped a production personalised recommender (nDCG@10 = 0.4), including the A/B evaluation pipeline.</li>
+                    <li>Helped set the recommendation and platform roadmap, and built prompt and model pipelines for an LLM news aggregator.</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="timeline-item reveal">
+                <p class="timeline-when">2021 — 2022</p>
+                <div>
+                  <h3 class="timeline-role">Data Science Lead</h3>
+                  <a class="timeline-org" href="https://www.linkedin.com/company/wonderbricks/" target="_blank" rel="noopener noreferrer">Wonderbricks</a>
+                  <p class="timeline-lead">Led a data science team building a recommendation engine for material substitution and a generative design engine for buildings.</p>
+                  <ul class="timeline-points">
+                    <li>Turned commercial requirements into ML systems designed for 10k to 100k users.</li>
+                    <li>Set the ML roadmap with the business, and the MLOps pipeline for those services.</li>
+                    <li>Ran research projects with domain experts.</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="timeline-item reveal">
+                <p class="timeline-when">2019 — 2021</p>
+                <div>
+                  <h3 class="timeline-role">Data Scientist</h3>
+                  <a class="timeline-org" href="https://www.gammonconstruction.com/" target="_blank" rel="noopener noreferrer">Gammon Construction Limited</a>
+                  <p class="timeline-lead">Hands-on lead for data science in construction: architecture, delivery, and mentoring.</p>
+                  <ul class="timeline-points">
+                    <li>Shipped a computer-vision platform for 7 construction tasks, ready for edge devices and production.</li>
+                    <li>Built a transformer classifier for safety issues, more than 70% above the previous model.</li>
+                    <li>Led a proof of concept that used deep reinforcement learning to schedule concrete production and delivery.</li>
+                    <li>Built an unsupervised forecast for concrete demand, cutting order error by about 40%, and put it in a web application.</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="timeline-item reveal">
+                <p class="timeline-when">2018 — 2019</p>
+                <div>
+                  <h3 class="timeline-role">Data Scientist</h3>
+                  <span class="timeline-org">Robot Data</span>
+                  <p class="timeline-lead">Led computer-vision R&amp;D for robotic products, from architecture through implementation.</p>
+                  <ul class="timeline-points">
+                    <li>Built a commercial facial-recognition system and a system for recognising aircraft repair parts.</li>
+                    <li>Pitched the work to clients and investors.</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="timeline-item reveal">
+                <p class="timeline-when">2018</p>
+                <div>
+                  <h3 class="timeline-role">Machine Learning Engineer</h3>
+                  <span class="timeline-org">Kami</span>
+                  <p class="timeline-lead">Worked on an intelligent conversational product.</p>
+                  <ul class="timeline-points">
+                    <li>Researched knowledge-graph embeddings for link prediction and graph completion.</li>
+                    <li>Contributed to a shared NLP and machine-learning library.</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- PROJECTS -->
+          <section aria-labelledby="projects-title" style="margin-top:clamp(40px,6vw,64px)">
+            <div class="section-head" style="margin-bottom:24px">
+              <p class="section-index">02</p>
+              <h2 class="section-title" id="projects-title" style="font-size:var(--step-3)">Selected projects</h2>
             </div>
 
-            <div class="sidebar-info_more">
+            <div class="project-grid reveal">
+              <article class="project">
+                <p class="project-num">01</p>
+                <h3>rl4trade</h3>
+                <p>Reinforcement-learning project for trading.</p>
+                <p class="project-when">Apr 2021 — Present</p>
+              </article>
 
-                <div class="separator"></div>
+              <article class="project">
+                <p class="project-num">02</p>
+                <h3>News-price fusion</h3>
+                <p>Models market moves from price and news: NLP context extraction, temporal representation learning, and deep RL on the series.</p>
+                <p class="project-when">May 2020 — Present</p>
+              </article>
 
-                <ul class="contacts-list">
+              <article class="project">
+                <p class="project-num">03</p>
+                <h3>Computer vision for construction</h3>
+                <p>Recognises construction materials and process behaviour with deep computer-vision models.</p>
+                <p class="project-when">Mar 2020 — Present</p>
+              </article>
 
-                    <li class="contact-item">
+              <article class="project">
+                <p class="project-num">04</p>
+                <h3>Process scheduling with RL</h3>
+                <p>Policy-optimisation agent for production and delivery scheduling, trained to cut resource use.</p>
+                <p class="project-when">Nov 2020 — Jun 2021</p>
+              </article>
 
-                        <div class="icon-box">
-                            <ion-icon name="mail-outline"></ion-icon>
-                        </div>
+              <article class="project">
+                <p class="project-num">05</p>
+                <h3>Construction order forecast</h3>
+                <p>Unsupervised representation learning plus a downstream regressor for construction-order demand.</p>
+                <p class="project-when">Jul 2020 — Jun 2021</p>
+              </article>
 
-                        <div class="contact-info">
-                            <p class="contact-title">Email</p>
+              <article class="project">
+                <p class="project-num">06</p>
+                <h3>Knowledge-graph relation extraction</h3>
+                <p>Research and implementation of a knowledge-graph model for relation extraction.</p>
+                <p class="project-when">Feb 2018 — Jun 2018</p>
+              </article>
+            </div>
+          </section>
 
-                            <a href="mailto:jaychanhoi1991@gmail.com" class="contact-link">jaychanhoi1991@gmail.com</a>
-                        </div>
-
-                    </li>
-
-                    <li class="contact-item">
-
-                        <div class="icon-box">
-                            <ion-icon name="phone-portrait-outline"></ion-icon>
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">Phone</p>
-
-                            <a href="tel:+85269773944" class="contact-link">+852 6977 3944</a>
-                        </div>
-
-                    </li>
-
-                    <li class="contact-item">
-
-                        <div class="icon-box">
-                            <ion-icon name="location-outline"></ion-icon>
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">Location</p>
-
-                            <address>Hong Kong</address>
-                        </div>
-
-                    </li>
-
-                </ul>
-
-                <div class="separator"></div>
-
-                <ul class="social-list">
-
-                    <li class="social-item">
-                        <a href="https://github.com/JayChanHoi" class="social-link">
-                            <ion-icon name="logo-github"></ion-icon>
-                        </a>
-                    </li>
-
-                    <li class="social-item">
-                        <a href="https://medium.com/@jaychanhoi1991" class="social-link">
-                            <ion-icon name="logo-medium"></ion-icon>
-                        </a>
-                    </li>
-
-                   <li class="social-item">
-                        <a href="https://www.linkedin.com/in/jay-chan-384800b0/" class="social-link">
-                            <ion-icon name="logo-linkedin"></ion-icon>
-                        </a>
-                   </li>
-
-                </ul>
-
+          <!-- EDUCATION -->
+          <section aria-labelledby="education-title" style="margin-top:clamp(40px,6vw,64px)">
+            <div class="section-head" style="margin-bottom:24px">
+              <p class="section-index">03</p>
+              <h2 class="section-title" id="education-title" style="font-size:var(--step-3)">Education</h2>
             </div>
 
-        </aside>
-
-
-
-
-
-        <!--
-          - #main-content
-        -->
-
-        <div class="main-content">
-
-            <!--
-              - #NAVBAR
-            -->
-
-            <nav class="navbar">
-
-                <ul class="navbar-list">
-
-
-                    <li class="navbar-item">
-                        <a href="index.html" class="navbar-link">About</a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="#" class="navbar-link active">Resume</a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="blog.html" class="navbar-link">Blog</a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="contact.html" class="navbar-link">Contact</a>
-                    </li>
-                </ul>
-
-            </nav>
-
-            <!--
-              - #RESUME
-            -->
-
-            <article class="resume active" data-page="resume">
-
-                <header>
-                    <h2 class="h2 article-title">Resume</h2>
-                </header>
-
-                <section class="timeline">
-
-                    <div class="title-wrapper">
-                        <div class="icon-box">
-                            <ion-icon name="book-outline"></ion-icon>
-                        </div>
-
-                        <h3 class="h3">Experience</h3>
-                    </div>
-
-                    <ol class="timeline-list">
-
-                       <li class="timeline-item">
-
-                        <h4 class="h4 timeline-item-title">Founder<span class="timeline-org">Oraclens Intelligence</span></h4>
-
-                        <span>Present</span>
-
-                        <p class="timeline-text">
-                            Building agent-native tools for research and investment analysis.
-
-                            <br /> - Design an agent research desk covering analysis, monitoring, and portfolio intelligence.
-                            <br /> - Skills and agent loops that write research notes; they do not place orders.
-                            <br /> - Pair last-mile delivery with evaluated, production-minded agent systems.
-                        </p>
-
-                        </li>
-
-                       <li class="timeline-item">
-
-                        <h4 class="h4 timeline-item-title">AI Engineering Lead<a class="timeline-org" href="https://www.hkma.gov.hk/" target="_blank" rel="noopener noreferrer">Hong Kong Monetary Authority</a></h4>
-
-                        <span>2025 - 2026</span>
-
-                        <p class="timeline-text">
-                            Led AI CoE delivery and governance for internal GenAI and agentic platforms.
-
-                            <br /> - Stood up multi-agent platforms spanning compliance, investment research, and related workflows.
-                            <br /> - Delivered an organisation-wide meeting-minutes solution with material productivity gain (~1,000 man-days/year).
-                            <br /> - Co-led agent infrastructure and AI governance against HKMA AI principles, including RAG and quality monitoring.
-                        </p>
-
-                        </li>
-
-                       <li class="timeline-item">
-
-                        <h4 class="h4 timeline-item-title">Digitalization Manager<a class="timeline-org" href="https://www.hkpc.org/en" target="_blank" rel="noopener noreferrer">Hong Kong Productivity Council</a></h4>
-
-                        <span>2024 - 2025</span>
-
-                        <p class="timeline-text">
-                            AI solution architect and product lead for governed GenAI programmes.
-
-                            <br /> - Led a GenAI / RAG programme that transformed complex funding-scheme vetting, with substantial productivity gain and a patent-filed invention.
-                            <br /> - Owned security, scalability, and governance for enterprise GenAI delivery.
-                            <br /> - Led and oversaw cycle-time optimisation.
-                        </p>
-
-                        </li>
-
-                        <li class="timeline-item">
-
-                            <h4 class="h4 timeline-item-title">Senior Data Scientist<span class="timeline-org">Apoidea</span></h4>
-
-                            <span>2022 - 2024</span>
-
-                            <p class="timeline-text">
-                                Small-team lead for data science. Owned a quantitative trading project,
-                                led recommendation-system development, and contributed to an LLM news aggregator.
-
-                                <br /> - Built a deep-RL trading system that keeps learning and adjusting, aimed at near-unattended operation.
-                                <br /> - Statistical-arbitrage and trend-following strategies, each above +50% annualised return with Sharpe ratio above 3.
-                                <br /> - Designed and shipped a production personalised recommender (nDCG@10 = 0.4), including the A/B evaluation pipeline.
-                                <br /> - Helped set the recommendation and platform roadmap.
-                                <br /> - Built prompt and model pipelines for an LLM news aggregator.
-                            </p>
-
-                        </li>
-
-                        <li class="timeline-item">
-
-                            <h4 class="h4 timeline-item-title">Data Science Lead<a class="timeline-org" href="https://www.linkedin.com/company/wonderbricks/" target="_blank" rel="noopener noreferrer">Wonderbricks</a></h4>
-
-                            <span>2021 - 2022</span>
-
-                            <p class="timeline-text">
-                                - Led a data science team building a recommendation engine for material substitution and a generative design engine for buildings.
-                                <br /> - Turned commercial requirements into ML systems designed for 10k to 100k users.
-                                <br /> - Set the ML roadmap with the business, and the MLOps pipeline for those services.
-                                <br /> - Ran research projects with domain experts.
-                            </p>
-
-                        </li>
-
-                        <li class="timeline-item">
-
-                            <h4 class="h4 timeline-item-title">Data Scientist<a class="timeline-org" href="https://www.gammonconstruction.com/" target="_blank" rel="noopener noreferrer">Gammon Construction Limited</a></h4>
-
-                            <span>2019 - 2021</span>
-
-                            <p class="timeline-text">
-                                - Hands-on lead for data science in construction: architecture, delivery, and mentoring.
-                                <br /> - Shipped a computer-vision platform for 7 construction tasks, ready for edge devices and production.
-                                <br /> - Built a transformer classifier for safety issues, more than 70% above the previous model.
-                                <br /> - Led a proof of concept that used deep reinforcement learning to schedule concrete production and delivery.
-                                <br /> - Built an unsupervised forecast for concrete demand, cutting order error by about 40%, and put it in a web application.
-                            </p>
-
-                        </li>
-                        <li class="timeline-item">
-
-                            <h4 class="h4 timeline-item-title">Data Scientist<span class="timeline-org">Robot Data</span></h4>
-
-                            <span>2018 - 2019</span>
-
-                            <p class="timeline-text">
-                                - Led computer-vision R&amp;D for robotic products, from architecture through implementation.
-                                <br /> - Built a commercial facial-recognition system and a system for recognising aircraft repair parts.
-                                <br /> - Pitched the work to clients and investors.
-                            </p>
-
-                        </li>
-                        <li class="timeline-item">
-
-                            <h4 class="h4 timeline-item-title">Machine Learning Engineer<span class="timeline-org">Kami</span></h4>
-
-                            <span>2018 - 2018</span>
-
-                            <p class="timeline-text">
-                                - Worked on an intelligent conversational product.
-                                <br /> - Researched knowledge-graph embeddings for link prediction and graph completion.
-                                <br /> - Contributed to a shared NLP and machine-learning library.
-                            </p>
-
-                        </li>
-                    </ol>
-
-                </section>
-
-                <section class="timeline">
-
-                    <div class="title-wrapper">
-                        <div class="icon-box">
-                            <ion-icon name="code-slash-outline"></ion-icon>
-                        </div>
-
-                        <h3 class="h3">Selected projects</h3>
-                    </div>
-
-                    <ol class="timeline-list">
-
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">rl4trade</h4>
-                            <span>Apr 2021 - Present</span>
-                            <p class="timeline-text">
-                                Reinforcement-learning project for trading.
-                            </p>
-                        </li>
-
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">News-price fused sentiment</h4>
-                            <span>May 2020 - Present</span>
-                            <p class="timeline-text">
-                                Models market moves from price and news. NLP extracts context from articles;
-                                representation learning, including temporal effects and deep reinforcement learning, works on the series.
-                            </p>
-                        </li>
-
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">Computer vision for construction</h4>
-                            <span>Mar 2020 - Present</span>
-                            <p class="timeline-text">
-                                Recognises construction materials and process behaviour with deep computer-vision models.
-                            </p>
-                        </li>
-
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">Process scheduling with reinforcement learning</h4>
-                            <span>Nov 2020 - Jun 2021</span>
-                            <p class="timeline-text">
-                                Policy-optimisation agent for production and delivery scheduling, trained to cut resource use.
-                            </p>
-                        </li>
-
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">Construction order forecast</h4>
-                            <span>Jul 2020 - Jun 2021</span>
-                            <p class="timeline-text">
-                                Unsupervised representation learning plus a downstream regressor for construction-order demand.
-                            </p>
-                        </li>
-
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">Knowledge-graph relation extraction</h4>
-                            <span>Feb 2018 - Jun 2018</span>
-                            <p class="timeline-text">
-                                Research and implementation of a knowledge-graph model for relation extraction.
-                            </p>
-                        </li>
-
-                    </ol>
-
-                </section>
-
-                <section class="timeline">
-
-                    <div class="title-wrapper">
-                        <div class="icon-box">
-                            <ion-icon name="book-outline"></ion-icon>
-                        </div>
-
-                        <h3 class="h3">Education</h3>
-                    </div>
-
-                    <ol class="timeline-list">
-
-                        <li class="timeline-item">
-
-                            <h4 class="h4 timeline-item-title">The Chinese University of Hong Kong</h4>
-
-                            <span>2012 - 2017</span>
-
-                            <p class="timeline-text">
-                                Bachelor of Science in Mathematics (Hons)
-                            </p>
-
-                        </li>
-
-                    </ol>
-
-                </section>
-
-                <section class="timeline">
-
-                    <div class="title-wrapper">
-                        <div class="icon-box">
-                            <ion-icon name="book-outline"></ion-icon>
-                        </div>
-
-                        <h3 class="h3">Languages</h3>
-                    </div>
-
-                    <ol class="timeline-list">
-
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">English</h4>
-                            <p class="timeline-text">Fluent</p>
-                        </li>
-
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">Cantonese</h4>
-                            <p class="timeline-text">Native</p>
-                        </li>
-
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">Mandarin</h4>
-                            <p class="timeline-text">Native</p>
-                        </li>
-
-                    </ol>
-
-                </section>
-
-                <section class="skill">
-
-                    <h3 class="h3 skills-title">My skills</h3>
-
-                    <ul class="skills-list content-card">
-
-                        <li class="skills-item">
-
-                            <div class="title-wrapper">
-                                <h5 class="h5">Python</h5>
-                            </div>
-
-                            <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 90%;"></div>
-                            </div>
-
-                        </li>
-
-                        <li class="skills-item">
-
-                            <div class="title-wrapper">
-                                <h5 class="h5">Agentic AI, RAG, LLM systems</h5>
-                            </div>
-
-                            <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 85%;"></div>
-                            </div>
-
-                        </li>
-
-                        <li class="skills-item">
-
-                            <div class="title-wrapper">
-                                <h5 class="h5">Reinforcement Learning</h5>
-                            </div>
-
-                            <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 80%;"></div>
-                            </div>
-
-                        </li>
-
-                        <li class="skills-item">
-
-                            <div class="title-wrapper">
-                                <h5 class="h5">Recommendation systems</h5>
-                            </div>
-
-                            <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 80%;"></div>
-                            </div>
-
-                        </li>
-
-                        <li class="skills-item">
-
-                            <div class="title-wrapper">
-                                <h5 class="h5">NLP, LLM fine-tuning, prompt engineering</h5>
-                            </div>
-
-                            <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 80%;"></div>
-                            </div>
-
-                        </li>
-
-                        <li class="skills-item">
-
-                            <div class="title-wrapper">
-                                <h5 class="h5">Generative AI</h5>
-                            </div>
-
-                            <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 80%;"></div>
-                            </div>
-
-                        </li>
-
-                        <li class="skills-item">
-
-                            <div class="title-wrapper">
-                                <h5 class="h5">Quantitative trading, statistical modelling</h5>
-                            </div>
-
-                            <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 60%;"></div>
-                            </div>
-
-                        </li>
-
-                        <li class="skills-item">
-
-                            <div class="title-wrapper">
-                                <h5 class="h5">Data Engineering, MLOps</h5>
-                            </div>
-
-                            <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 60%;"></div>
-                            </div>
-
-                        </li>
-
-                        <li class="skills-item">
-
-                            <div class="title-wrapper">
-                                <h5 class="h5">Computer Vision</h5>
-                            </div>
-
-                            <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 60%;"></div>
-                            </div>
-
-                        </li>
-
-                        <li class="skills-item">
-
-                            <div class="title-wrapper">
-                                <h5 class="h5">MongoDB</h5>
-                            </div>
-
-                            <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 50%;"></div>
-                            </div>
-
-                        </li>
-                        <li class="skills-item">
-
-                            <div class="title-wrapper">
-                                <h5 class="h5">Amazon AWS</h5>
-                            </div>
-
-                            <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 50%;"></div>
-                            </div>
-
-                        </li>
-
-                    </ul>
-
-                </section>
-
-            </article>
-
-
+            <div class="timeline">
+              <article class="timeline-item reveal">
+                <p class="timeline-when">2012 — 2017</p>
+                <div>
+                  <h3 class="timeline-role">The Chinese University of Hong Kong</h3>
+                  <span class="timeline-org">BSc (Hons) Mathematics</span>
+                </div>
+              </article>
+            </div>
+          </section>
         </div>
 
-    </main>
+        <!-- ASIDE -->
+        <aside class="resume-aside" aria-label="Details">
+          <div class="aside-block reveal">
+            <h3>Contact</h3>
+            <ul class="contact-list">
+              <li>
+                <span class="label">Email</span>
+                <a href="mailto:jaychanhoi1991@gmail.com">jaychanhoi1991@gmail.com</a>
+              </li>
+              <li>
+                <span class="label">Phone</span>
+                <a href="tel:+85269773944">+852 6977 3944</a>
+              </li>
+              <li>
+                <span class="label">Location</span>
+                <address>Hong Kong</address>
+              </li>
+              <li>
+                <span class="label">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/jay-chan-384800b0/" target="_blank" rel="noopener noreferrer">jay-chan-384800b0</a>
+              </li>
+            </ul>
+          </div>
 
+          <div class="aside-block reveal">
+            <h3>Skills</h3>
+            <div class="skill-row">
+              <div class="skill-top"><span>Agentic AI, RAG, LLMs</span><span class="pct">90</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="90" data-accent="true"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-top"><span>Python</span><span class="pct">90</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-top"><span>Reinforcement learning</span><span class="pct">80</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-top"><span>NLP and fine-tuning</span><span class="pct">80</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-top"><span>Recommendation systems</span><span class="pct">80</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-top"><span>Quantitative trading</span><span class="pct">70</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="70"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-top"><span>Data engineering, MLOps</span><span class="pct">65</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="65"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-top"><span>Computer vision</span><span class="pct">60</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="60"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-top"><span>AWS</span><span class="pct">55</span></div>
+              <div class="skill-track"><div class="skill-fill" data-width="55"></div></div>
+            </div>
+          </div>
 
+          <div class="aside-block reveal">
+            <h3>Languages</h3>
+            <ul class="lang-list">
+              <li><span>English</span><span class="level">Fluent</span></li>
+              <li><span>Cantonese</span><span class="level">Native</span></li>
+              <li><span>Mandarin</span><span class="level">Native</span></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
 
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p class="footer-note">© <span data-year>2026</span> Jay Chan · Hong Kong</p>
+      <ul class="socials">
+        <li><a href="https://github.com/JayChanHoi" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GH</a></li>
+        <li><a href="https://medium.com/@jaychanhoi1991" target="_blank" rel="noopener noreferrer" aria-label="Medium">MD</a></li>
+        <li><a href="https://www.linkedin.com/in/jay-chan-384800b0/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LI</a></li>
+      </ul>
+    </div>
+  </footer>
 
-
-
-    <!--
-      - custom js link
-    -->
-    <script src="./assets/js/script.js"></script>
-
-    <!--
-      - ionicon link
-    -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+  <script src="./assets/js/site.js"></script>
 </body>
 
 </html>

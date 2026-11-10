@@ -1,336 +1,308 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta http-equiv="X-UA-Compatible" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jay Chan - AI Engineering Lead</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jay Chan — AI Engineering Lead, Hong Kong</title>
+  <meta name="description" content="Jay Chan is founder of Oraclens Intelligence and an AI engineering lead in Hong Kong. Eight years putting machine learning into production: recommendation, computer vision, reinforcement learning, and governed generative AI.">
+  <meta name="theme-color" content="#f4f1ea">
 
-    <!--
-      - favicon
-    -->
-    <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <link rel="icon" href="./assets/images/logo.svg" type="image/svg+xml">
 
-    <!--
-      - custom css link
-    -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <!--
-      - google font link
-    -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXQLH66J4S"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+  <link rel="stylesheet" href="./assets/css/site.css">
+  <script>document.documentElement.classList.add("js");</script>
 
-        gtag('config', 'G-LXQLH66J4S');
-    </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXQLH66J4S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-LXQLH66J4S');
+  </script>
 </head>
 
 <body>
-
-    <!--
-      - #MAIN
-    -->
-
-    <main>
-
-        <!--
-          - #SIDEBAR
-        -->
-
-        <aside class="sidebar" data-sidebar>
-
-            <div class="sidebar-info">
-
-                <figure class="avatar-box">
-                    <img src="./assets/images/profile_picture_1.JPG" alt="Jay Chan" width="80">
-                </figure>
-
-                <div class="info-content">
-                    <h1 class="name" title="Jay Chan">Jay Chan</h1>
-
-                    <p class="title">Founder</p>
-                    <p class="title">AI Engineering Lead</p>
-                </div>
-
-                <button class="info_more-btn" data-sidebar-btn>
-                    <span>Show Contacts</span>
-
-                    <ion-icon name="chevron-down"></ion-icon>
-                </button>
-
-            </div>
-
-            <div class="sidebar-info_more">
-
-                <div class="separator"></div>
-
-                <ul class="contacts-list">
-
-                    <li class="contact-item">
-
-                        <div class="icon-box">
-                            <ion-icon name="mail-outline"></ion-icon>
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">Email</p>
-
-                            <a href="mailto:jaychanhoi1991@gmail.com" class="contact-link">jaychanhoi1991@gmail.com</a>
-                        </div>
-
-                    </li>
-
-                    <li class="contact-item">
-
-                        <div class="icon-box">
-                            <ion-icon name="phone-portrait-outline"></ion-icon>
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">Phone</p>
-
-                            <a href="tel:+85269773944" class="contact-link">+852 6977 3944</a>
-                        </div>
-
-                    </li>
-
-                    <li class="contact-item">
-
-                        <div class="icon-box">
-                            <ion-icon name="location-outline"></ion-icon>
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">Location</p>
-
-                            <address>Hong Kong</address>
-                        </div>
-
-                    </li>
-
-                </ul>
-
-                <div class="separator"></div>
-
-                <ul class="social-list">
-
-                    <li class="social-item">
-                        <a href="https://github.com/JayChanHoi" class="social-link">
-                            <ion-icon name="logo-github"></ion-icon>
-                        </a>
-                    </li>
-
-                    <li class="social-item">
-                        <a href="https://medium.com/@jaychanhoi1991" class="social-link">
-                            <ion-icon name="logo-medium"></ion-icon>
-                        </a>
-                    </li>
-
-                   <li class="social-item">
-                        <a href="https://www.linkedin.com/in/jay-chan-384800b0/" class="social-link">
-                            <ion-icon name="logo-linkedin"></ion-icon>
-                        </a>
-                   </li>
-
-                </ul>
-
-            </div>
-
-        </aside>
-
-
-
-
-
-        <!--
-          - #main-content
-        -->
-
-        <div class="main-content">
-
-            <!--
-              - #NAVBAR
-            -->
-
-            <nav class="navbar">
-
-                <ul class="navbar-list">
-
-                    <li class="navbar-item">
-                        <a href="#" class="navbar-link active">About</a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="resume.html" class="navbar-link">Resume</a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="blog.html" class="navbar-link">Blog</a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="contact.html" class="navbar-link">Contact</a>
-                    </li>
-
-                </ul>
-
-            </nav>
-
-
-            <!--
-              - #ABOUT
-            -->
-
-            <article class="about active" data-page="about">
-
-                <header>
-                    <h2 class="h2 article-title">About Me</h2>
-                </header>
-
-                <section class="about-text">
-                    <p>
-                        I'm Jay Chan, founder of Oraclens Intelligence and an AI engineering
-                        lead in Hong Kong. For more than eight years I have taken machine
-                        learning into production — recommendation, computer vision,
-                        reinforcement learning, and governed generative AI.
-                    </p>
-
-                    <p>
-                        At the Hong Kong Monetary Authority I led AI CoE delivery:
-                        multi-agent platforms, retrieval, and quality monitoring, including
-                        an organisation-wide meeting-minutes solution. Before that I led
-                        governed GenAI programmes at the Hong Kong Productivity Council,
-                        and I shipped recommendation systems and deep-RL trading systems
-                        in industry.
-                    </p>
-
-                    <p>
-                        At Oraclens I build agent-native tools for research and investment
-                        analysis. The work I keep returning to is reinforcement learning
-                        for trading, news-and-price models, and computer vision on real
-                        operations.
-                    </p>
-
-                    <p>
-                        I care about last-mile delivery: frame the workflow, evaluate the
-                        system, and get people to use it. Outside work I coach Taekwondo,
-                        train, and follow new AI research.
-                    </p>
-                </section>
-
-
-                <!--
-                  - service
-                -->
-
-                <section class="service">
-
-                    <h3 class="h3 service-title">What I'm doing</h3>
-
-                    <ul class="service-list">
-
-                        <li class="service-item">
-
-                            <div class="service-icon-box">
-                                <img src="./assets/images/icon-dev.svg" alt="Agentic AI icon" width="40">
-                            </div>
-
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title">Agentic AI &amp; RAG</h4>
-
-                                <p class="service-item-text">
-                                    Multi-agent platforms, retrieval systems, and quality monitoring
-                                    that hold up in production.
-                                </p>
-                            </div>
-
-                        </li>
-
-                        <li class="service-item">
-
-                            <div class="service-icon-box">
-                                <img src="./assets/images/icon-design.svg" alt="Architecture icon" width="40">
-                            </div>
-
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title">Solution architecture</h4>
-
-                                <p class="service-item-text">
-                                    Workflow-first design from problem framing through security,
-                                    governance, and adoption.
-                                </p>
-                            </div>
-
-                        </li>
-
-                        <li class="service-item">
-
-                            <div class="service-icon-box">
-                                <img src="./assets/images/icon-app.svg" alt="Applied ML icon" width="40">
-                            </div>
-
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title">Applied ML</h4>
-
-                                <p class="service-item-text">
-                                    Hands-on Python systems across NLP, recommendation, computer vision,
-                                    and reinforcement learning.
-                                </p>
-                            </div>
-
-                        </li>
-
-                        <li class="service-item">
-
-                            <div class="service-icon-box">
-                                <img src="./assets/images/icon-photo.svg" alt="Financial services icon" width="40">
-                            </div>
-
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title">Financial services AI</h4>
-
-                                <p class="service-item-text">
-                                    Delivery in banking and regulatory settings, with responsible
-                                    and secure AI practices.
-                                </p>
-                            </div>
-
-                        </li>
-
-                    </ul>
-
-                </section>
-
-            </article>
-
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="index.html" aria-label="Jay Chan, home">
+        <span class="brand-dot" aria-hidden="true"></span>
+        Jay Chan
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+        Menu
+      </button>
+
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <a href="index.html" aria-current="page">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html" class="nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div>
+          <p class="hero-status">
+            <span class="status-dot" aria-hidden="true"></span>
+            Hong Kong · Founder, Oraclens Intelligence
+          </p>
+
+          <h1 class="hero-name display">
+            <span class="line"><span>Jay</span></span>
+            <span class="line"><span><em>Chan</em></span></span>
+          </h1>
+
+          <p class="hero-sub">
+            Eight years putting machine learning into production — recommendation,
+            computer vision, reinforcement learning, and governed generative AI.
+            Most recently, AI CoE delivery at the Hong Kong Monetary Authority.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn" href="resume.html">
+              Read the resume
+              <span class="arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="btn btn-ghost" href="contact.html">Get in touch</a>
+          </div>
         </div>
 
-    </main>
+        <figure class="portrait">
+          <div class="portrait-frame">
+            <img src="./assets/images/profile_picture_1.JPG" alt="Jay Chan" width="330" height="412">
+          </div>
+          <figcaption class="portrait-caption">
+            <span>Jay Chan</span>
+            <span>2026</span>
+          </figcaption>
+        </figure>
+      </div>
 
+      <div class="shell">
+        <div class="facts">
+          <div class="facts-grid">
+            <div class="fact reveal">
+              <p class="fact-value">8+ yrs</p>
+              <p class="fact-label">Shipping ML to production</p>
+            </div>
+            <div class="fact reveal" style="--delay: 90ms">
+              <p class="fact-value">2025–26</p>
+              <p class="fact-label">AI CoE lead, HKMA</p>
+            </div>
+            <div class="fact reveal" style="--delay: 180ms">
+              <p class="fact-value">~1,000</p>
+              <p class="fact-label">Man-days saved per year</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- 01 ABOUT -->
+    <section class="section" aria-labelledby="about-title">
+      <div class="shell">
+        <div class="section-head">
+          <p class="section-index">01</p>
+          <h2 class="section-title" id="about-title">Delivery is the point.</h2>
+        </div>
 
+        <div class="prose reveal">
+          <p>
+            I'm Jay Chan. I build AI systems that people actually use, and I keep
+            working until the workflow changes around them.
+          </p>
+          <p>
+            At the <strong>Hong Kong Monetary Authority</strong> I led AI CoE delivery:
+            multi-agent platforms, retrieval, and quality monitoring, including an
+            organisation-wide meeting-minutes solution. Before that I led governed
+            GenAI programmes at the <strong>Hong Kong Productivity Council</strong>,
+            and I shipped recommendation systems and deep-RL trading systems in industry.
+          </p>
+          <p>
+            Now I'm building <strong>Oraclens Intelligence</strong>, agent-native tools
+            for research and investment analysis. The work I keep returning to is
+            reinforcement learning for trading, news-and-price models, and computer
+            vision on real operations.
+          </p>
+          <p>
+            Outside work I coach Taekwondo, train, and follow new AI research.
+          </p>
+        </div>
+      </div>
+    </section>
 
+    <!-- 02 EXPERTISE -->
+    <section class="section" aria-labelledby="work-title">
+      <div class="shell">
+        <div class="section-head">
+          <p class="section-index">02</p>
+          <h2 class="section-title" id="work-title">What I do</h2>
+        </div>
 
+        <div class="expertise">
+          <article class="expertise-item reveal">
+            <p class="expertise-num">01</p>
+            <h3>Agentic AI</h3>
+            <p>Multi-agent platforms, retrieval, and quality monitoring that hold up once real users touch them.</p>
+          </article>
 
-    <!--
-      - custom js link
-    -->
-    <script src="./assets/js/script.js"></script>
+          <article class="expertise-item reveal" style="--delay: 70ms">
+            <p class="expertise-num">02</p>
+            <h3>Solution architecture</h3>
+            <p>Workflow-first design, from problem framing through security, governance, and adoption.</p>
+          </article>
 
-    <!--
-      - ionicon link
-    -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+          <article class="expertise-item reveal" style="--delay: 140ms">
+            <p class="expertise-num">03</p>
+            <h3>Applied ML</h3>
+            <p>Hands-on Python across NLP, recommendation, computer vision, and reinforcement learning.</p>
+          </article>
 
+          <article class="expertise-item reveal" style="--delay: 210ms">
+            <p class="expertise-num">04</p>
+            <h3>Financial services</h3>
+            <p>Delivery in banking and regulatory settings, with responsible and secure AI practice.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 EXPERIENCE -->
+    <section class="section" aria-labelledby="exp-title">
+      <div class="shell">
+        <div class="section-head">
+          <p class="section-index">03</p>
+          <h2 class="section-title" id="exp-title">Where I've built</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item is-current reveal">
+            <p class="timeline-when">Present</p>
+            <div>
+              <h3 class="timeline-role">Founder</h3>
+              <span class="timeline-org">Oraclens Intelligence</span>
+              <p class="timeline-lead">Agent-native tools for research and investment analysis.</p>
+              <ul class="timeline-points">
+                <li>An agent research desk covering analysis, monitoring, and portfolio intelligence.</li>
+                <li>Skills and agent loops that write research notes; they do not place orders.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <p class="timeline-when">2025 — 2026</p>
+            <div>
+              <h3 class="timeline-role">AI Engineering Lead</h3>
+              <a class="timeline-org" href="https://www.hkma.gov.hk/" target="_blank" rel="noopener noreferrer">Hong Kong Monetary Authority</a>
+              <p class="timeline-lead">Led AI CoE delivery and governance for internal GenAI and agentic platforms.</p>
+              <ul class="timeline-points">
+                <li>Multi-agent platforms spanning compliance, investment research, and related workflows.</li>
+                <li>An organisation-wide meeting-minutes solution with material productivity gain.</li>
+                <li>Agent infrastructure and AI governance, including retrieval and quality monitoring.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <p class="timeline-when">2024 — 2025</p>
+            <div>
+              <h3 class="timeline-role">Digitalization Manager</h3>
+              <a class="timeline-org" href="https://www.hkpc.org/en" target="_blank" rel="noopener noreferrer">Hong Kong Productivity Council</a>
+              <p class="timeline-lead">AI solution architect and product lead for governed GenAI programmes.</p>
+              <ul class="timeline-points">
+                <li>A GenAI and retrieval programme that transformed complex funding-scheme vetting.</li>
+                <li>Security, scalability, and governance for enterprise GenAI delivery.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn btn-ghost" href="resume.html">
+            Full resume, 2018 onward
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 SELECTED WORK -->
+    <section class="section" aria-labelledby="projects-title">
+      <div class="shell">
+        <div class="section-head">
+          <p class="section-index">04</p>
+          <h2 class="section-title" id="projects-title">Selected work</h2>
+        </div>
+
+        <div class="project-grid reveal">
+          <article class="project">
+            <p class="project-num">01</p>
+            <h3>rl4trade</h3>
+            <p>Reinforcement learning applied to trading — the long-running research thread.</p>
+            <p class="project-when">Apr 2021 — Present</p>
+          </article>
+
+          <article class="project">
+            <p class="project-num">02</p>
+            <h3>News-price fusion</h3>
+            <p>Modelling market moves from price and news, with temporal representation learning.</p>
+            <p class="project-when">May 2020 — Present</p>
+          </article>
+
+          <article class="project">
+            <p class="project-num">03</p>
+            <h3>Construction orders</h3>
+            <p>Unsupervised demand forecasting that cut order error by about 40%.</p>
+            <p class="project-when">Jul 2020 — Jun 2021</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+      <div class="shell">
+        <p class="eyebrow">Open to conversations</p>
+        <h2>If the system has to <em>work</em>, let's talk.</h2>
+        <div class="hero-actions">
+          <a class="btn" href="contact.html">
+            Start a conversation
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="btn btn-ghost" href="mailto:jaychanhoi1991@gmail.com">Email directly</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p class="footer-note">© <span data-year>2026</span> Jay Chan · Hong Kong</p>
+      <ul class="socials">
+        <li><a href="https://github.com/JayChanHoi" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GH</a></li>
+        <li><a href="https://medium.com/@jaychanhoi1991" target="_blank" rel="noopener noreferrer" aria-label="Medium">MD</a></li>
+        <li><a href="https://www.linkedin.com/in/jay-chan-384800b0/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LI</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="./assets/js/site.js"></script>
 </body>
 
 </html>
