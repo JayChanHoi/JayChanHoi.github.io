@@ -576,6 +576,13 @@ a.timeline-org:hover { text-decoration: underline; text-underline-offset: 4px; }
   letter-spacing: 0.12em;
   color: var(--accent);
 }
+.project .project-org {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
 .project h3 {
   font-family: var(--font-display);
   font-size: 1.3rem;
@@ -583,8 +590,10 @@ a.timeline-org:hover { text-decoration: underline; text-underline-offset: 4px; }
   letter-spacing: -0.02em;
   line-height: 1.2;
 }
+a.project h3 { transition: color 200ms var(--ease); }
+a.project:hover h3 { color: var(--accent); }
 .project p { color: var(--muted); font-size: 0.86rem; line-height: 1.6; }
-.project-when {
+.project .project-when {
   margin-top: auto;
   padding-top: 10px;
   font-family: var(--font-mono);
